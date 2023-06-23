@@ -1,5 +1,3 @@
-// import ChatInput from '@/components/ChatInput'
-// import Messages from '@/components/Messages'
 import ChatInput from '@/components/ChatInput'
 import Messages from '@/components/Messages'
 import { fetchRedis } from '@/helpers/redis'

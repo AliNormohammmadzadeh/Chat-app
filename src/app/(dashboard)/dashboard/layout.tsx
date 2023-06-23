@@ -1,11 +1,11 @@
-import { Icon, Icons } from '@/components/Icons'
+import { Icons } from '@/components/Icons'
 import SignOutButton from '@/components/SignOutButton'
 import { authOptions } from '@/lib/auth'
 import { getServerSession } from 'next-auth'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { FC, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import FriendRequestSidebarOptions from '@/components/FriendRequestSidebarOptions'
 import { fetchRedis } from '@/helpers/redis'
 import { getFriendsByUserId } from '@/helpers/get-friends-by-user-id'
@@ -36,7 +36,7 @@ const Layout = async ({ children }: LayoutProps) => {
   if (!session) notFound()
 
   const friends = await getFriendsByUserId(session.user.id)
-  console.log('friends', friends)
+  // console.log('friends', friends)
 
   const unseenRequestCount = (
     (await fetchRedis(

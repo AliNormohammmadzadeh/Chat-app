@@ -70,5 +70,5 @@ const ChatInput: FC<ChatInputProps> = ({chatPartner , chatId}) => {
         </div>
       )
 }
- 
+  
 export default ChatInput;

@@ -37,7 +37,7 @@ const FriendRequests: FC<FriendRequestsProps> = ({
 
     pusherClient.bind('incoming_friend_requests', friendRequestHandler)
 
-    return () => {
+    return () => {  
       pusherClient.unsubscribe(
         toPusherKey(`user:${sessionId}:incoming_friend_requests`)
       )
